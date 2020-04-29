@@ -1,10 +1,14 @@
 {
     "dataset": {
         "id": "",
-        "name": "",
+        "name": "Tri Drive Network 5.2 With Conditions",
         "sourceTag": "",
         "tenantId": 0,
         "aspects": {
+            "dcat-dataset-strings": {
+                "title": "Tri Drive Network 5.2 With Conditions",
+                "description": ""
+            },
             "spatial-coverage": {
                 "bbox": [
                     114.58581756592292,

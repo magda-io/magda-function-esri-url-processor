@@ -63,10 +63,15 @@ export default async function myFunction(
     const result: UrlProcessorResult = {
         dataset: {
             id: "",
-            name: "",
+            name: data.name,
             sourceTag: "",
             tenantId: 0,
-            aspects: {}
+            aspects: {
+                "dcat-dataset-strings": {
+                    title: data.name,
+                    description: data?.description
+                }
+            }
         },
         distributions: [
             {
@@ -77,7 +82,7 @@ export default async function myFunction(
                 aspects: {
                     "dcat-distribution-strings": {
                         title: data.name,
-                        description: data.description,
+                        description: data?.description,
                         format: "ESRI REST"
                     }
                 }
