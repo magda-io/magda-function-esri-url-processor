@@ -3,7 +3,7 @@ name: Main CI Workflow
 on: push
 
 env:
-  REPO_NAME: magda-ckan-connector
+  REPO_NAME: magda-function-template
 
 jobs:
   build-test-docker:
@@ -22,7 +22,7 @@ jobs:
       - name: Setup Helm
         uses: azure/setup-helm@v1
         with:
-          version: v3.1.2
+          version: v3.2.0
 
       - run: yarn helm-lint
 

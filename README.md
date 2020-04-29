@@ -2,6 +2,8 @@
 
 An Openfass Serverless Function template for Magda. You can also use [faas-cli](https://github.com/openfaas/faas-cli) to create a Openfaas function. However, this template leverage our own toolset and works with our own deployment / CI system better.
 
+> You can click the `Use this template` Github function button above to create a new repository from this template repository instead of forking it. More details see [Github Help Document: Creating a repository from a template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)
+
 ### Supply Your Own Function Code
 
 You can supply your own function code in [`src/index.ts`](./src/index.ts). e.g.:
@@ -12,7 +14,7 @@ export default async function myFunction(input: any) {
 }
 ```
 
-> Invoke you function with `Content-Type: application/json` header will make your function receive unserialised data as input parameter. 
+> Invoke you function with `Content-Type: application/json` header will make your function receive unserialised data as input parameter.
 
 ### Install Project Dependencies
 

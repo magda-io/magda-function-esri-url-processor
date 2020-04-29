@@ -3,35 +3,18 @@
 const express = require("express");
 const app = express();
 const handler = require("./dist/index").default;
-const bodyParser = require("body-parser");
-
-const isArray = a => {
-    return !!a && a.constructor === Array;
-};
-
-const isObject = a => {
-    return !!a && a.constructor === Object;
-};
 
 if (process.env.RAW_BODY === "true") {
     app.use(bodyParser.raw({ type: "*/*" }));
 } else {
-    var jsonLimit = process.env.MAX_JSON_SIZE || "100kb"; //body-parser default
-    app.use(bodyParser.json({ limit: jsonLimit }));
-    app.use(bodyParser.raw()); // "Content-Type: application/octet-stream"
-    app.use(bodyParser.text({ type: "text/*" }));
+    var bodyLimit = process.env.MAX_BODY_SIZE || "100kb"; //body-parser default
+    app.use(express.json({ limit: bodyLimit })); //-- for parsing application/json
+    app.use(express.urlencoded({ extended: true, limit: bodyLimit })); //-- for parsing application/x-www-form-urlencoded
+    app.use(express.text({ type: "text/*" })); //-- for parsing text content
+    app.use(express.raw({ limit: bodyLimit, limit: bodyLimit })); // "Content-Type: application/octet-stream"
 }
 
 app.disable("x-powered-by");
-
-function parseJson(str) {
-    try {
-        const data = JSON.parse(str);
-        return data;
-    } catch (e) {
-        return null;
-    }
-}
 
 const middleware = async (req, res) => {
     try {
@@ -39,11 +22,11 @@ const middleware = async (req, res) => {
             throw new Error("imported function is not in function type!");
         }
         /**
-         * res.body will be unserialised data if json data context-type is sent
+         * req.body will contain unserialised data if json data context-type is sent
          * req & res are provided for full control of request handling process
          * return `res` to stop this middleware from handling repsonse for you
          */
-        const result = await handler(res.body, req, res);
+        const result = await handler(req.body, req, res);
 
         if (typeof result === "string") {
             // --- if it's string, output as plain text rather than json

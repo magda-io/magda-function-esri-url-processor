@@ -5,7 +5,7 @@ on:
     types: [published]
 
 env:
-  REPO_NAME: magda-ckan-connector
+  REPO_NAME: magda-function-template
 
 jobs:
   release-helm-chart:
@@ -25,7 +25,7 @@ jobs:
       - name: Setup Helm
         uses: azure/setup-helm@v1
         with:
-          version: v3.1.2
+          version: v3.2.0
 
       - name: helm-check
         run: yarn helm-lint
@@ -64,7 +64,7 @@ jobs:
           mkdir -p sync_dir
           mkdir -p index_dir
           if ! aws s3 cp s3://magda-charts/index.yaml index_dir/index.yaml; then echo "failed to copy current repo index" && exit 1; fi
-          helm package -d sync_dir magda-function-template
+          helm package -d sync_dir ${REPO_NAME}
           helm repo index --merge "index_dir/index.yaml" sync_dir
           mv -f sync_dir/index.yaml index_dir/index.yaml
           aws s3 sync sync_dir s3://magda-charts/ --acl public-read
