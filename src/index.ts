@@ -32,7 +32,7 @@ function getSpatialCoverageAspect(data: any) {
 }
 
 export default async function myFunction(
-    input: any
+    input: string
 ): Promise<UrlProcessorResult> {
     if (!isUrl(input)) {
         throw new Error("Expect the input to be an valid URL.");

@@ -1,20 +1,29 @@
 # magda-function-esri-url-processor
 
-An Openfass Serverless Function template for Magda. You can also use [faas-cli](https://github.com/openfaas/faas-cli) to create a Openfaas function. However, this template leverage our own toolset and works with our own deployment / CI system better.
+This is Magda ESRI URL processor (a serverless function) created from [this template repo](https://github.com/magda-io/magda-function-template)
 
-> You can click the `Use this template` Github function button above to create a new repository from this template repository instead of forking it. More details see [Github Help Document: Creating a repository from a template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)
+The url processor is used by dataset metadata creation tool to extract metadata from a ESRI API URL.
 
-### Supply Your Own Function Code
+Requirement can be found [here](https://github.com/magda-io/magda/issues/2810)
 
-You can supply your own function code in [`src/index.ts`](./src/index.ts). e.g.:
+### Function Spec
+
+The function source code can be found from [here](./src/index.ts).
+
+The function is defined as below:
 
 ```typescript
-export default async function myFunction(input: any) {
-    return "hello world!\n";
-}
+export type UrlProcessorResult = {
+    dataset: Record;
+    distributions: Record[];
+};
+
+export default async function myFunction(
+    input: string
+): Promise<UrlProcessorResult>;
 ```
 
-> Invoke you function with `Content-Type: application/json` header will make your function receive unserialised data as input parameter.
+It expects an url string as input and output an `UrlProcessorResult` type data.
 
 ### Install Project Dependencies
 
@@ -50,7 +59,8 @@ yarn install
   repository: https://charts.magda.io
   tags:
       - all
-      - magda-function-esri-url-processor
+      - url-processors
+      - ckan-connector-functions
 ```
 
 -   Run `helm dep build` to pull the dependency
