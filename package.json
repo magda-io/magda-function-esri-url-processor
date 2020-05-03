@@ -40,9 +40,9 @@
   "dependencies": {
     "@magda/registry-client": "^0.0.57-0-beta-2",
     "@magda/scripts": "^0.0.57-0",
-    "axios": "^0.19.2",
     "express": "^4.15.4",
     "is-url": "^1.2.4",
+    "isomorphic-fetch": "^2.2.1",
     "urijs": "^1.19.2"
   },
   "config": {

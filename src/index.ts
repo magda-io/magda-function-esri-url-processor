@@ -1,4 +1,4 @@
-import axios from "axios";
+import "isomorphic-fetch";
 import URI from "urijs";
 import isUrl from "is-url";
 import { Record } from "@magda/registry-client";
@@ -44,20 +44,21 @@ export default async function myFunction(
     }
 
     const url = uri.toString();
-    const res = await axios.get(uri.toString());
+    const res = await fetch(uri.toString());
     if (res.status !== 200) {
         throw new Error(
             `Failed to retrieve data from url : ${url} Error: ${res.statusText}`
         );
     }
 
-    if (!res?.data?.id || !res?.data?.name) {
+    const data = await res.json();
+
+    if (!data?.id || !data?.name) {
         throw new Error(
             `Failed to retrieve data from esri API: ${url} Error: can't locate id or name`
         );
     }
 
-    const data = res.data;
     const spatialCoverageAspect = getSpatialCoverageAspect(data);
 
     const result: UrlProcessorResult = {
