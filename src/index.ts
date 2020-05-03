@@ -31,7 +31,7 @@ function getSpatialCoverageAspect(data: any) {
     };
 }
 
-export default async function myFunction(
+export default async function processEsriApiUrl(
     input: string
 ): Promise<UrlProcessorResult> {
     if (!isUrl(input)) {
