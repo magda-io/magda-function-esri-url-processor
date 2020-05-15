@@ -11,21 +11,26 @@ export type UrlProcessorResult = {
 const isNumber = (v: any) => typeof v === "number";
 
 function getSpatialCoverageAspect(data: any) {
+    const extentData = data?.extent
+        ? data.extent
+        : data?.fullExtent
+        ? data.fullExtent
+        : data?.initialExtent;
     if (
-        !isNumber(data?.extent?.xmax) ||
-        !isNumber(data?.extent?.ymax) ||
-        !isNumber(data?.extent?.xmin) ||
-        !isNumber(data?.extent?.ymin)
+        !isNumber(extentData?.xmax) ||
+        !isNumber(extentData?.ymax) ||
+        !isNumber(extentData?.xmin) ||
+        !isNumber(extentData?.ymin)
     ) {
         return null;
     }
     return {
         // -- Bounding box in order minlon (west), minlat (south), maxlon (east), maxlat (north)
         bbox: [
-            data.extent.xmin,
-            data.extent.ymin,
-            data.extent.xmax,
-            data.extent.ymax
+            extentData.xmin,
+            extentData.ymin,
+            extentData.xmax,
+            extentData.ymax
         ],
         spatialDataInputMethod: "bbox"
     };
@@ -53,38 +58,54 @@ export default async function processEsriApiUrl(
 
     const data = await res.json();
 
-    if (!data?.id || !data?.name) {
+    if (!data?.extent && !data?.fullExtent && !data?.initialExtent) {
         throw new Error(
-            `Failed to retrieve data from esri API: ${url} Error: can't locate id or name`
+            `Failed to locate any extent data from esri API: ${url}`
         );
     }
 
     const spatialCoverageAspect = getSpatialCoverageAspect(data);
+    const name = data?.name ? data.name : "";
+    const description = data?.description
+        ? data.description
+        : data?.serviceDescription
+        ? data.serviceDescription
+        : "";
 
     const result: UrlProcessorResult = {
         dataset: {
             id: "",
-            name: data.name,
+            name,
             sourceTag: "",
             tenantId: 0,
             aspects: {
                 "dcat-dataset-strings": {
-                    title: data.name,
-                    description: data?.description
+                    title: name,
+                    description: description
+                },
+                source: {
+                    id: "esri-url-processor",
+                    type: "external",
+                    url: uri.toString()
                 }
             }
         },
         distributions: [
             {
-                id: data.id,
-                name: data.name,
+                id: "",
+                name,
                 sourceTag: "",
                 tenantId: 0,
                 aspects: {
                     "dcat-distribution-strings": {
-                        title: data.name,
-                        description: data?.description,
+                        title: name,
+                        description: description,
                         format: "ESRI REST"
+                    },
+                    source: {
+                        id: "esri-url-processor",
+                        type: "external",
+                        url: uri.toString()
                     }
                 }
             }

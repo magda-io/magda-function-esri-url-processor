@@ -1,25 +1,25 @@
 {
     "dataset": {
         "id": "",
-        "name": "Tri Drive Network 5.2 With Conditions",
+        "name": "",
         "sourceTag": "",
         "tenantId": 0,
         "aspects": {
             "dcat-dataset-strings": {
-                "title": "Tri Drive Network 5.2 With Conditions",
-                "description": ""
+                "title": "",
+                "description": "A layer containing MBRC Owned and maintained stormwater point features, this includes spillways, weirs, traps and more."
             },
             "source": {
                 "id": "esri-url-processor",
                 "type": "external",
-                "url": "http://example.com/esri-sample?f=json"
+                "url": "http://example.com/esri-sample-collection?f=json"
             },
             "spatial-coverage": {
                 "bbox": [
-                    114.58581756592292,
-                    -31.584842789509423,
-                    129.0007504122189,
-                    -15.451094736225684
+                    468770.2703999998,
+                    6966850.8054,
+                    520510.7213000003,
+                    7032527.8387
                 ],
                 "spatialDataInputMethod": "bbox"
             }
@@ -28,26 +28,26 @@
     "distributions": [
         {
             "id": "",
-            "name": "Tri Drive Network 5.2 With Conditions",
+            "name": "",
             "sourceTag": "",
             "tenantId": 0,
             "aspects": {
                 "dcat-distribution-strings": {
-                    "title": "Tri Drive Network 5.2 With Conditions",
-                    "description": "",
+                    "title": "",
+                    "description": "A layer containing MBRC Owned and maintained stormwater point features, this includes spillways, weirs, traps and more.",
                     "format": "ESRI REST"
                 },
                 "source": {
                     "id": "esri-url-processor",
                     "type": "external",
-                    "url": "http://example.com/esri-sample?f=json"
+                    "url": "http://example.com/esri-sample-collection?f=json"
                 },
                 "spatial-coverage": {
                     "bbox": [
-                        114.58581756592292,
-                        -31.584842789509423,
-                        129.0007504122189,
-                        -15.451094736225684
+                        468770.2703999998,
+                        6966850.8054,
+                        520510.7213000003,
+                        7032527.8387
                     ],
                     "spatialDataInputMethod": "bbox"
                 }
