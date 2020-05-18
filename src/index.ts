@@ -2,6 +2,7 @@ import "isomorphic-fetch";
 import URI from "urijs";
 import isUrl from "is-url";
 import { Record } from "@magda/registry-client";
+import extent2WGS84 from "./extent2WGS84";
 
 export type UrlProcessorResult = {
     dataset: Record;
@@ -10,7 +11,7 @@ export type UrlProcessorResult = {
 
 const isNumber = (v: any) => typeof v === "number";
 
-function getSpatialCoverageAspect(data: any) {
+async function getSpatialCoverageAspect(data: any) {
     const extentData = data?.extent
         ? data.extent
         : data?.fullExtent
@@ -22,16 +23,24 @@ function getSpatialCoverageAspect(data: any) {
         !isNumber(extentData?.xmin) ||
         !isNumber(extentData?.ymin)
     ) {
-        return null;
+        return undefined;
     }
+
+    // -- Bounding box in order minlon (west), minlat (south), maxlon (east), maxlat (north)
+    let bbox = [
+        extentData.xmin,
+        extentData.ymin,
+        extentData.xmax,
+        extentData.ymax
+    ];
+
+    // --- transform the coordinate system
+    if (extentData?.spatialReference) {
+        bbox = await extent2WGS84(bbox, extentData.spatialReference);
+    }
+
     return {
-        // -- Bounding box in order minlon (west), minlat (south), maxlon (east), maxlat (north)
-        bbox: [
-            extentData.xmin,
-            extentData.ymin,
-            extentData.xmax,
-            extentData.ymax
-        ],
+        bbox,
         spatialDataInputMethod: "bbox"
     };
 }
@@ -64,7 +73,7 @@ export default async function processEsriApiUrl(
         );
     }
 
-    const spatialCoverageAspect = getSpatialCoverageAspect(data);
+    const spatialCoverageAspect = await getSpatialCoverageAspect(data);
     const name = data?.name ? data.name : "";
     const description = data?.description
         ? data.description

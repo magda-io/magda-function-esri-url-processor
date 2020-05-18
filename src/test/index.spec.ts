@@ -21,7 +21,11 @@ describe("Test Function", () => {
     before(() => {
         nock.disableNetConnect();
         // Allow localhost connections so we can test local routes and mock servers.
-        nock.enableNetConnect("127.0.0.1");
+        nock.enableNetConnect(
+            host =>
+                host.includes("spatialreference.org") ||
+                host.includes("127.0.0.1")
+        );
 
         esriApiScope = nock(esriApiUrl).persist();
 
