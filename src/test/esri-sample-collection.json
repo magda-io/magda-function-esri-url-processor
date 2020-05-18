@@ -1,0 +1,75 @@
+{
+    "currentVersion": 10.7,
+    "serviceItemId": "8f0551944a51411ca4cc3f856c1610e9",
+    "serviceDescription": "A layer containing MBRC Stormwater point features.",
+    "hasVersionedData": false,
+    "supportsDisconnectedEditing": false,
+    "hasStaticData": false,
+    "hasSharedDomains": false,
+    "maxRecordCount": 2000,
+    "supportedQueryFormats": "JSON",
+    "supportsVCSProjection": false,
+    "capabilities": "Query",
+    "description": "A layer containing MBRC Owned and maintained stormwater point features, this includes spillways, weirs, traps and more.",
+    "copyrightText": "",
+    "spatialReference": {
+        "wkid": 28356,
+        "latestWkid": 28356
+    },
+    "initialExtent": {
+        "xmin": 429095.42812055605,
+        "ymin": 6979255.343332302,
+        "xmax": 560185.5618794432,
+        "ymax": 7020123.306667697,
+        "spatialReference": {
+            "wkid": 28356,
+            "latestWkid": 28356
+        }
+    },
+    "fullExtent": {
+        "xmin": 468770.2703999998,
+        "ymin": 6966850.8054,
+        "xmax": 520510.7213000003,
+        "ymax": 7032527.8387,
+        "spatialReference": {
+            "wkid": 28356,
+            "latestWkid": 28356
+        }
+    },
+    "allowGeometryUpdates": true,
+    "units": "esriMeters",
+    "supportsAppend": true,
+    "supportsSharedDomains": true,
+    "size": 31760384,
+    "syncEnabled": false,
+    "supportsApplyEditsWithGlobalIds": false,
+    "supportsReturnDeleteResults": true,
+    "editorTrackingInfo": {
+        "enableEditorTracking": false,
+        "enableOwnershipAccessControl": false,
+        "allowOthersToQuery": true,
+        "allowOthersToUpdate": true,
+        "allowOthersToDelete": false,
+        "allowAnonymousToQuery": true,
+        "allowAnonymousToUpdate": true,
+        "allowAnonymousToDelete": true
+    },
+    "xssPreventionInfo": {
+        "xssPreventionEnabled": true,
+        "xssPreventionRule": "InputOnly",
+        "xssInputRule": "rejectInvalid"
+    },
+    "layers": [
+        {
+            "id": 0,
+            "name": "Stormwater_Point",
+            "parentLayerId": -1,
+            "defaultVisibility": true,
+            "subLayerIds": null,
+            "minScale": 0,
+            "maxScale": 0,
+            "geometryType": "esriGeometryPoint"
+        }
+    ],
+    "tables": []
+}

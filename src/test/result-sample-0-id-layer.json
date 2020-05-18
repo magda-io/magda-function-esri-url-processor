@@ -1,0 +1,57 @@
+{
+    "dataset": {
+        "id": "",
+        "name": "City Plan 2014 — Airport environs overlay — Obstacle Limitation Surfaces (OLS) — boundary",
+        "sourceTag": "",
+        "tenantId": 0,
+        "aspects": {
+            "dcat-dataset-strings": {
+                "title": "City Plan 2014 — Airport environs overlay — Obstacle Limitation Surfaces (OLS) — boundary",
+                "description": ""
+            },
+            "source": {
+                "id": "esri-url-processor",
+                "type": "external",
+                "url": "http://example.com/esri-sample-0-id-layer?f=json"
+            },
+            "spatial-coverage": {
+                "bbox": [
+                    152.84930770862158,
+                    -27.624137651323718,
+                    153.26983958089872,
+                    -27.20144867114104
+                ],
+                "spatialDataInputMethod": "bbox"
+            }
+        }
+    },
+    "distributions": [
+        {
+            "id": "",
+            "name": "City Plan 2014 — Airport environs overlay — Obstacle Limitation Surfaces (OLS) — boundary",
+            "sourceTag": "",
+            "tenantId": 0,
+            "aspects": {
+                "dcat-distribution-strings": {
+                    "title": "City Plan 2014 — Airport environs overlay — Obstacle Limitation Surfaces (OLS) — boundary",
+                    "description": "",
+                    "format": "ESRI REST"
+                },
+                "source": {
+                    "id": "esri-url-processor",
+                    "type": "external",
+                    "url": "http://example.com/esri-sample-0-id-layer?f=json"
+                },
+                "spatial-coverage": {
+                    "bbox": [
+                        152.84930770862158,
+                        -27.624137651323718,
+                        153.26983958089872,
+                        -27.20144867114104
+                    ],
+                    "spatialDataInputMethod": "bbox"
+                }
+            }
+        }
+    ]
+}

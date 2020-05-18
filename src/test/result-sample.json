@@ -1,0 +1,57 @@
+{
+    "dataset": {
+        "id": "",
+        "name": "Tri Drive Network 5.2 With Conditions",
+        "sourceTag": "",
+        "tenantId": 0,
+        "aspects": {
+            "dcat-dataset-strings": {
+                "title": "Tri Drive Network 5.2 With Conditions",
+                "description": ""
+            },
+            "source": {
+                "id": "esri-url-processor",
+                "type": "external",
+                "url": "http://example.com/esri-sample?f=json"
+            },
+            "spatial-coverage": {
+                "bbox": [
+                    114.58581756592292,
+                    -31.584842789509427,
+                    129.0007504122189,
+                    -15.451094736225684
+                ],
+                "spatialDataInputMethod": "bbox"
+            }
+        }
+    },
+    "distributions": [
+        {
+            "id": "",
+            "name": "Tri Drive Network 5.2 With Conditions",
+            "sourceTag": "",
+            "tenantId": 0,
+            "aspects": {
+                "dcat-distribution-strings": {
+                    "title": "Tri Drive Network 5.2 With Conditions",
+                    "description": "",
+                    "format": "ESRI REST"
+                },
+                "source": {
+                    "id": "esri-url-processor",
+                    "type": "external",
+                    "url": "http://example.com/esri-sample?f=json"
+                },
+                "spatial-coverage": {
+                    "bbox": [
+                        114.58581756592292,
+                        -31.584842789509427,
+                        129.0007504122189,
+                        -15.451094736225684
+                    ],
+                    "spatialDataInputMethod": "bbox"
+                }
+            }
+        }
+    ]
+}

@@ -1,15 +1,18 @@
 global:
   image: {}
+  urlProcessors:
+    image: {}
   openfaas: {}
 
 # image setting loadding order: (from higher priority to lower priority)
 # - Values.image.x
+# - Values.global.urlProcessors.image.x
 # - Values.global.image.x
 # - Values.defaultImage.x
 # You can set `imagePullSecret` value to `false` (bool) to reset the value (see example below)
 
 image: 
-  name: "magda-function-template"
+  name: "magda-function-esri-url-processor"
   # repository: 
   # tag: 
   # pullPolicy: 

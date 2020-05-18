@@ -1,0 +1,264 @@
+{
+    "currentVersion": 10.51,
+    "id": 206,
+    "name": "Tri Drive Network 5.2 With Conditions",
+    "type": "Feature Layer",
+    "description": "",
+    "geometryType": "esriGeometryPolyline",
+    "sourceSpatialReference": {
+        "wkt": "GEOGCS[\"Longitude / Latitude (GDA 94)\",DATUM[\"GDA 94\",SPHEROID[\"GRS 80\",6378137.0,298.257222101]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Decimal_Degree\",0.0174532925199433]]"
+    },
+    "copyrightText": "",
+    "parentLayer": null,
+    "subLayers": [],
+    "minScale": 0,
+    "maxScale": 0,
+    "drawingInfo": {
+        "renderer": {
+            "type": "simple",
+            "symbol": {
+                "type": "esriSLS",
+                "style": "esriSLSDash",
+                "color": [138, 69, 69, 255],
+                "width": 1.5
+            },
+            "label": "",
+            "description": ""
+        },
+        "transparency": 0,
+        "labelingInfo": null
+    },
+    "defaultVisibility": true,
+    "extent": {
+        "xmin": 114.58581756592292,
+        "ymin": -31.584842789509423,
+        "xmax": 129.0007504122189,
+        "ymax": -15.451094736225684,
+        "spatialReference": {
+            "wkt": "GEOGCS[\"Longitude / Latitude (GDA 94)\",DATUM[\"GDA 94\",SPHEROID[\"GRS 80\",6378137.0,298.257222101]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Decimal_Degree\",0.0174532925199433]]"
+        }
+    },
+    "hasAttachments": false,
+    "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+    "displayField": "ROAD_NAME",
+    "typeIdField": null,
+    "subtypeFieldName": null,
+    "fields": [
+        {
+            "name": "OBJECTID",
+            "type": "esriFieldTypeOID",
+            "alias": "OBJECTID",
+            "domain": null
+        },
+        {
+            "name": "ROAD",
+            "type": "esriFieldTypeString",
+            "alias": "ROAD",
+            "length": 30,
+            "domain": null
+        },
+        {
+            "name": "ROAD_NAME",
+            "type": "esriFieldTypeString",
+            "alias": "ROAD_NAME",
+            "length": 240,
+            "domain": null
+        },
+        {
+            "name": "START_SLK",
+            "type": "esriFieldTypeDouble",
+            "alias": "START_SLK",
+            "domain": null
+        },
+        {
+            "name": "END_SLK",
+            "type": "esriFieldTypeDouble",
+            "alias": "END_SLK",
+            "domain": null
+        },
+        {
+            "name": "START_TRUE_DIST",
+            "type": "esriFieldTypeDouble",
+            "alias": "START_TRUE_DIST",
+            "domain": null
+        },
+        {
+            "name": "END_TRUE_DIST",
+            "type": "esriFieldTypeDouble",
+            "alias": "END_TRUE_DIST",
+            "domain": null
+        },
+        {
+            "name": "NETWORK_TYPE",
+            "type": "esriFieldTypeString",
+            "alias": "NETWORK_TYPE",
+            "length": 30,
+            "domain": null
+        },
+        {
+            "name": "LG_NAME",
+            "type": "esriFieldTypeString",
+            "alias": "LG_NAME",
+            "length": 30,
+            "domain": null
+        },
+        {
+            "name": "ACCESS_TYPE",
+            "type": "esriFieldTypeString",
+            "alias": "ACCESS_TYPE",
+            "length": 10,
+            "domain": null
+        },
+        {
+            "name": "NETWORK",
+            "type": "esriFieldTypeString",
+            "alias": "NETWORK",
+            "length": 80,
+            "domain": null
+        },
+        {
+            "name": "FROM_INTERSECTION",
+            "type": "esriFieldTypeString",
+            "alias": "FROM_INTERSECTION",
+            "length": 200,
+            "domain": null
+        },
+        {
+            "name": "TO_INTERSECTION",
+            "type": "esriFieldTypeString",
+            "alias": "TO_INTERSECTION",
+            "length": 200,
+            "domain": null
+        },
+        {
+            "name": "COMMENTS",
+            "type": "esriFieldTypeString",
+            "alias": "COMMENTS",
+            "length": 4000,
+            "domain": null
+        },
+        {
+            "name": "MAX_SPEED",
+            "type": "esriFieldTypeString",
+            "alias": "MAX_SPEED",
+            "length": 200,
+            "domain": null
+        },
+        {
+            "name": "CURFEW",
+            "type": "esriFieldTypeString",
+            "alias": "CURFEW",
+            "length": 4000,
+            "domain": null
+        },
+        {
+            "name": "CONDITION",
+            "type": "esriFieldTypeString",
+            "alias": "CONDITION",
+            "length": 4000,
+            "domain": null
+        },
+        {
+            "name": "PRODUCT",
+            "type": "esriFieldTypeString",
+            "alias": "PRODUCT",
+            "length": 4000,
+            "domain": null
+        },
+        {
+            "name": "GEOLOC",
+            "type": "esriFieldTypeGeometry",
+            "alias": "GEOLOC",
+            "domain": null
+        },
+        {
+            "name": "GEOLOC.STLength()",
+            "type": "esriFieldTypeDouble",
+            "alias": "GEOLOC.STLength()",
+            "domain": null
+        },
+        {
+            "name": "COMMON_USAGE_NAME",
+            "type": "esriFieldTypeString",
+            "alias": "COMMON_USAGE_NAME",
+            "length": 240,
+            "domain": null
+        },
+        {
+            "name": "CWY",
+            "type": "esriFieldTypeString",
+            "alias": "CWY",
+            "length": 10,
+            "domain": null
+        },
+        {
+            "name": "RA_NO",
+            "type": "esriFieldTypeString",
+            "alias": "RA_NO",
+            "length": 2,
+            "domain": null
+        },
+        {
+            "name": "RA_NAME",
+            "type": "esriFieldTypeString",
+            "alias": "RA_NAME",
+            "length": 30,
+            "domain": null
+        },
+        {
+            "name": "LG_NO",
+            "type": "esriFieldTypeString",
+            "alias": "LG_NO",
+            "length": 3,
+            "domain": null
+        },
+        {
+            "name": "ROUTE_NE_ID",
+            "type": "esriFieldTypeInteger",
+            "alias": "ROUTE_NE_ID",
+            "domain": null
+        }
+    ],
+    "indexes": [
+        {
+            "name": "R333235_pk",
+            "fields": "OBJECTID",
+            "isAscending": true,
+            "isUnique": true,
+            "description": ""
+        },
+        {
+            "name": "S333189_idx",
+            "fields": "GEOLOC",
+            "isAscending": true,
+            "isUnique": true,
+            "description": ""
+        }
+    ],
+    "subtypes": [],
+    "relationships": [],
+    "canModifyLayer": true,
+    "canScaleSymbols": false,
+    "hasLabels": false,
+    "capabilities": "Map,Query,Data",
+    "maxRecordCount": 1000,
+    "supportsStatistics": true,
+    "supportsAdvancedQueries": true,
+    "supportedQueryFormats": "JSON, AMF, geoJSON",
+    "ownershipBasedAccessControlForFeatures": {
+        "allowOthersToQuery": true
+    },
+    "useStandardizedQueries": true,
+    "advancedQueryCapabilities": {
+        "useStandardizedQueries": true,
+        "supportsStatistics": true,
+        "supportsOrderBy": true,
+        "supportsDistinct": true,
+        "supportsPagination": true,
+        "supportsTrueCurve": true,
+        "supportsReturningQueryExtent": true,
+        "supportsQueryWithDistance": true,
+        "supportsSqlExpression": true
+    },
+    "supportsDatumTransformation": true
+}

@@ -1,0 +1,57 @@
+{
+    "dataset": {
+        "id": "",
+        "name": "",
+        "sourceTag": "",
+        "tenantId": 0,
+        "aspects": {
+            "dcat-dataset-strings": {
+                "title": "",
+                "description": "A layer containing MBRC Owned and maintained stormwater point features, this includes spillways, weirs, traps and more."
+            },
+            "source": {
+                "id": "esri-url-processor",
+                "type": "external",
+                "url": "http://example.com/esri-sample-collection?f=json"
+            },
+            "spatial-coverage": {
+                "bbox": [
+                    152.68404707558977,
+                    -27.42159427684277,
+                    153.20750884415614,
+                    -26.828438900544754
+                ],
+                "spatialDataInputMethod": "bbox"
+            }
+        }
+    },
+    "distributions": [
+        {
+            "id": "",
+            "name": "",
+            "sourceTag": "",
+            "tenantId": 0,
+            "aspects": {
+                "dcat-distribution-strings": {
+                    "title": "",
+                    "description": "A layer containing MBRC Owned and maintained stormwater point features, this includes spillways, weirs, traps and more.",
+                    "format": "ESRI REST"
+                },
+                "source": {
+                    "id": "esri-url-processor",
+                    "type": "external",
+                    "url": "http://example.com/esri-sample-collection?f=json"
+                },
+                "spatial-coverage": {
+                    "bbox": [
+                        152.68404707558977,
+                        -27.42159427684277,
+                        153.20750884415614,
+                        -26.828438900544754
+                    ],
+                    "spatialDataInputMethod": "bbox"
+                }
+            }
+        }
+    ]
+}

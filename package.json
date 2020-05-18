@@ -1,8 +1,8 @@
 {
-  "name": "magda-function-template",
-  "version": "1.0.0",
+  "name": "magda-function-esri-url-processor",
+  "version": "0.0.57-0",
   "description": "An Openfass Serverless Function template for Magda",
-  "repository": "https://github.com/magda-io/magda-function-template.git",
+  "repository": "https://github.com/magda-io/magda-function-esri-url-processor.git",
   "author": "Jacky Jiang <t83714@gmail.com>",
   "license": "Apache-2.0",
   "private": true,
@@ -15,18 +15,23 @@
     "test": "mocha --require ts-node/register \"src/test/**/*.spec.ts\"",
     "docker-build-local": "create-docker-context-for-node-component --build --push --tag auto --local",
     "docker-build-prod": "create-docker-context-for-node-component --build --push --tag auto",
-    "helm-lint": "helm lint deploy/magda-function-template -f deploy/test-deploy.yaml",
-    "deploy-local": "helm template deploy/magda-function-template -f deploy/minikube-dev.yaml | kubectl apply -f -",
+    "helm-lint": "helm lint deploy/magda-function-esri-url-processor -f deploy/test-deploy.yaml",
+    "deploy-local": "helm template deploy/magda-function-esri-url-processor -f deploy/minikube-dev.yaml | kubectl apply -f -",
     "retag-and-push": "retag-and-push"
   },
   "devDependencies": {
     "@magda/scripts": "^0.0.57-0",
-    "@types/express": "^4.0.37",
-    "@types/mocha": "^7.0.1",
     "@types/chai": "^4.2.8",
-    "mocha": "^7.0.1",
+    "@types/express": "^4.0.37",
+    "@types/is-url": "^1.2.28",
+    "@types/mocha": "^7.0.1",
+    "@types/nock": "^11.1.0",
+    "@types/proj4": "^2.5.0",
+    "@types/urijs": "1.15.38",
     "chai": "^4.2.0",
     "husky": "^3.1.0",
+    "mocha": "^7.0.1",
+    "nock": "^12.0.3",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1",
     "rimraf": "^3.0.0",
@@ -34,12 +39,17 @@
     "typescript": "^3.7.2"
   },
   "dependencies": {
+    "@magda/registry-client": "^0.0.57-0-beta-2",
     "@magda/scripts": "^0.0.57-0",
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "is-url": "^1.2.4",
+    "isomorphic-fetch": "^2.2.1",
+    "proj4": "^2.6.2",
+    "urijs": "^1.19.2"
   },
   "config": {
     "docker": {
-      "name": "data61/magda-function-template",
+      "name": "data61/magda-function-esri-url-processor",
       "include": "node_modules dist Dockerfile package.json bootstrap.js"
     }
   },
