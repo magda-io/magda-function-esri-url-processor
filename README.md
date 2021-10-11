@@ -85,3 +85,27 @@ This repo comes with script to build, test & release script to release docker im
 -   `AWS_SECRET_ACCESS_KEY`: Magda helm chart repo S3 bucket access key secret
 -   `DOCKER_HUB_PASSWORD`: Magda docker hub bot password
 -   `GITHUB_ACCESS_TOKEN`: Magda github bot access token
+
+## Requirements
+
+Kubernetes: `>= 1.14.0-0`
+
+| Repository              | Name         | Version       |
+| ----------------------- | ------------ | ------------- |
+| https://charts.magda.io | magda-common | 1.0.0-alpha.4 |
+
+## Values
+
+| Key                          | Type   | Default                               | Description |
+| ---------------------------- | ------ | ------------------------------------- | ----------- |
+| defaultImage.imagePullSecret | bool   | `false`                               |             |
+| defaultImage.pullPolicy      | string | `"IfNotPresent"`                      |             |
+| defaultImage.repository      | string | `"docker.io/data61"`                  |             |
+| defaultImage.tag             | string | `"0.0.57-0"`                          |             |
+| global.image                 | object | `{}`                                  |             |
+| global.openfaas              | object | `{}`                                  |             |
+| global.urlProcessors.image   | object | `{}`                                  |             |
+| image.name                   | string | `"magda-function-esri-url-processor"` |             |
+| resources.limits.cpu         | string | `"100m"`                              |             |
+| resources.requests.cpu       | string | `"50m"`                               |             |
+| resources.requests.memory    | string | `"30Mi"`                              |             |
