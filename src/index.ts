@@ -5,8 +5,8 @@ import { Record } from "@magda/registry-client";
 import extent2WGS84 from "./extent2WGS84";
 
 export type UrlProcessorResult = {
-    dataset: Record;
-    distributions: Record[];
+    dataset: Omit<Record, "authnReadPolicyId">;
+    distributions: Omit<Record, "authnReadPolicyId">[];
 };
 
 const isNumber = (v: any) => typeof v === "number";

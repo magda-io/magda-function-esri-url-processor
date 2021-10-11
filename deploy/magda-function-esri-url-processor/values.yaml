@@ -14,13 +14,11 @@ global:
 image: 
   name: "magda-function-esri-url-processor"
   # repository: 
-  # tag: 
   # pullPolicy: 
   # imagePullSecret: 
 
 defaultImage:
   repository: docker.io/data61
-  tag: 0.0.57-0
   pullPolicy: IfNotPresent
   imagePullSecret: false
 
