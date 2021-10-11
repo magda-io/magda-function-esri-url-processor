@@ -14,7 +14,6 @@ global:
 image: 
   name: "magda-function-esri-url-processor"
   # repository: 
-  # tag: 
   # pullPolicy: 
   # imagePullSecret: 
 
