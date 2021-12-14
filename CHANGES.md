@@ -1,6 +1,7 @@
 # 1.1.0
 
 -   Remove label from metadata to avoid crd validation error (with openfaas helm chart 5.5.5-magda.1)
+-   Release multi-arch docker images (linux/amd64, linux/arm64) from CI pipeline
 
 # 1.0.0
 
