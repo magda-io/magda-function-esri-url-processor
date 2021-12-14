@@ -101,7 +101,6 @@ Kubernetes: `>= 1.14.0-0`
 | defaultImage.imagePullSecret | bool   | `false`                               |             |
 | defaultImage.pullPolicy      | string | `"IfNotPresent"`                      |             |
 | defaultImage.repository      | string | `"docker.io/data61"`                  |             |
-| defaultImage.tag             | string | `"0.0.57-0"`                          |             |
 | global.image                 | object | `{}`                                  |             |
 | global.openfaas              | object | `{}`                                  |             |
 | global.urlProcessors.image   | object | `{}`                                  |             |

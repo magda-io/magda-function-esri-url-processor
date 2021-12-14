@@ -7,8 +7,6 @@ kind: Function
 metadata:
   name: {{ .Chart.Name }}
   namespace: {{ include "magda-function-esri-url-processor.openfaaFunctionNamespace" . | quote }}
-  labels: 
-    magdaType: 
 spec:
   name: {{ .Chart.Name }}
   handler: node bootstrap.js
