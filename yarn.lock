@@ -57,10 +57,10 @@
     recursive-readdir "^2.2.2"
     yaml "^1.10.2"
 
-"@magda/docker-utils@^1.1.0-alpha.4":
-  version "1.1.0-alpha.4"
-  resolved "https://registry.yarnpkg.com/@magda/docker-utils/-/docker-utils-1.1.0-alpha.4.tgz#cd2427b3ad0f88b236818736d3396534f0cc8388"
-  integrity sha512-/+cmvAdtu9lZ0J1TjAzY9uEvaTdKLewazCLAaHd3hVg3ac45dYbLVz38/wXRTMaY1knoF8t0ySfL3FMGTvJSxA==
+"@magda/docker-utils@^2.3.2-alpha.2":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@magda/docker-utils/-/docker-utils-2.3.3.tgz#cfa9f1db8890200a04dd1564e393136f80c2ff8a"
+  integrity sha512-dxvCzrXQv4qoGCzvBYMBdAMDTESAvdSobvUlgu/Dk7wByubneTpS7EGKtTWNy2MRRFVGSunBlFiRpSl1nw7Zng==
   dependencies:
     fs-extra "^2.1.2"
     is-subdir "^1.0.2"
@@ -137,6 +137,11 @@
   version "1.2.30"
   resolved "https://registry.yarnpkg.com/@types/is-url/-/is-url-1.2.30.tgz#85567e8bee4fee69202bc3448f9fb34b0d56c50a"
   integrity sha512-AnlNFwjzC8XLda5VjRl4ItSd8qp8pSNowvsut0WwQyBWHpOxjxRJm8iO6uETWqEyLdYdb9/1j+Qd9gQ4l5I4fw==
+
+"@types/isomorphic-fetch@^0.0.35":
+  version "0.0.35"
+  resolved "https://registry.yarnpkg.com/@types/isomorphic-fetch/-/isomorphic-fetch-0.0.35.tgz#c1c0d402daac324582b6186b91f8905340ea3361"
+  integrity sha512-DaZNUvLDCAnCTjgwxgiL1eQdxIKEpNLOlTNtAgnZc50bG2copGhRrFN9/PxPBuJe+tZVLCbQ7ls0xveXVRPkvw==
 
 "@types/mime@^1":
   version "1.3.2"

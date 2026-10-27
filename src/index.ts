@@ -1,4 +1,4 @@
-import "isomorphic-fetch";
+import fetch from "isomorphic-fetch";
 import URI from "urijs";
 import isUrl from "is-url";
 import { Record } from "@magda/registry-client";

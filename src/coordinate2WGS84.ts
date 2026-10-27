@@ -1,4 +1,4 @@
-import "isomorphic-fetch";
+import fetch from "isomorphic-fetch";
 import proj4 from "proj4";
 
 // See https://github.com/Esri/i3s-spec/blob/master/docs/2.0/spatialReference.cmn.md
@@ -54,7 +54,7 @@ async function resolveSpatialReference(
     }
     // --- we use proj4 definition if possible
     const res = await fetch(
-        `https://spatialreference.org/ref/epsg/${wkid}/proj4/`
+        `https://spatialreference.org/ref/epsg/${wkid}/proj4.txt`
     );
     const bodyText = await res.text();
     if (!res.ok) {
