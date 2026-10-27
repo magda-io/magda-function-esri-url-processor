@@ -26,10 +26,11 @@
   },
   "devDependencies": {
     "@magda/ci-utils": "^1.0.2",
-    "@magda/docker-utils": "^1.1.0-alpha.4",
+    "@magda/docker-utils": "^2.3.2-alpha.2",
     "@types/chai": "^4.2.8",
     "@types/express": "^4.0.37",
     "@types/is-url": "^1.2.28",
+    "@types/isomorphic-fetch": "^0.0.35",
     "@types/mocha": "^9.1.1",
     "@types/nock": "^11.1.0",
     "@types/proj4": "^2.5.0",
